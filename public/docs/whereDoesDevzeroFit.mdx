@@ -1,0 +1,45 @@
+# Software Development Lifecycle (SDLC)
+
+This is generally what the software development lifecycle looks like in most companies.
+
+## Development
+
+The development stage is when an engineer clones code onto a machine, writes and compiles code in an IDE, and tests it to make sure the newly developed functionality works as expected. This is the inner loop of software development.
+
+### Change to development as a result of DevZero
+
+**Post-DevZero**
+
+With DevZero, the engineer can connect their local IDE to a production-like environment hosted by DevZero. Testing can happen directly in their dedicated environment, thus significantly shortening the inner loop.
+
+## Code review
+
+Once the code is developed, the engineer pushes a branch to a remote location and requests their peers to review the code, to verify quality and to ensure that the requirements are met. Peers may clone the changes to their local to verify functionality in their environment before approving.
+
+### Post-DevZero
+
+With DevZero, the engineer can get a preview environment that’s exactly like the production-symmetric environment that the engineer built their changes in. This makes it much easier to review the code, before giving approval or requesting changes.
+
+## CI/CD
+
+Post successful review, the code is sent to a CI system where a suite of (unit, functional, integration) tests are run to verify the incoming code. Often times, tests will be run against an environment that contains the newly modified code, as well as its dependencies to perform end-to-end tests of the modified system. Post this step, CD systems build artifacts of the modified applications and deploy them to a pre-production environment.
+
+### Post-DevZero
+
+CI tests can now be executed within a dedicated production-symmetric environment.
+
+CD remains unchanged with DevZero.
+
+## Pre-production
+
+This is a single or multiple (e.g., staging, pre-prod, QA) shared tenancy production-like environment where the newly modified code is introduced. Manual or automated tests are run against this environment. Once the tests are successful, the code is promoted to the production environment.
+
+### Change to pre-prod/dev/staging with DevZero
+
+**Post-DevZero**
+
+Every change can get deployed into its own ephemeral production-like environment for a final round of testing before getting deployed into production. This removes all problems associated with shared tenancy.
+
+## Production
+
+This is the stable environment that serves customer traffic. There are no changes to Production with DevZero.

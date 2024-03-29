@@ -1,0 +1,24 @@
+# Explore Environment Templates
+
+Next, let’s delve into what happened behind the scenes when you launched your environment instance. This part of our guide requires you to return to the DevZero Console in your web browser.
+
+## Understanding Environment Templates
+
+With DevZero, all developer instances are based on an **environment template**. These templates are crucial as they define the resources, libraries, custom scripts, etc., that are essential for your service or application. Typically, templates are written in YAML and include several key blocks: `softwarepolicy`, `repopolicy`, and `scriptpolicy`.
+
+### How to View an Environment Template
+
+1. **Access the Template Editor** - Navigate to the instance you launched earlier. Click the dropdown arrow next to the **Launch** button, and then select the **Edit** option. This action will open the template editor.
+
+2. **Template Exploration** - While the Quickstart does not permit template modification, this is an excellent opportunity to familiarize yourself with the templating syntax and its extensibility. For a deeper understanding, [learn more about templating syntax and extensibility here](#).
+
+3. **Review Environment Details** - In the template editor, selecting **Environment Details** at the top will reveal further information about your instance's runtime. This includes the **Base Configuration** and the **maximum number of pre-provisioned machines**.
+
+## Cleaning Up
+
+It's important to manage your resources effectively:
+
+- **Auto-Hibernation** - DevZero environments are designed to automatically hibernate if inactive for more than 30 minutes, aiding in cost management.
+- **Manual Shutdown** - For optimal resource management, we recommend fully stopping an environment when it's no longer needed. To do this, navigate to your running environments, click the three dots icon for more options, and select **Delete**.
+
+By understanding and utilizing environment templates, you're leveraging a powerful aspect of the DevZero platform that enhances the efficiency and customization of your development workflows.
