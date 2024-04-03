@@ -19,6 +19,9 @@ const generateEmbeddings = async () => {
       await storeEmbeddings(mdxFile.content, embedding);
 
     }
+
+    console.log('Embeddings generated and stored successfully.');
+    
   } catch (error) {
     console.error('Error generating embeddings:', error);
   }

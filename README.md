@@ -33,3 +33,36 @@ Our project leverages a robust technology stack, focusing on **Supabase** for da
 ### Framework: Next.js
 
 - **Next.js** is a React framework enhancing web development with features like hybrid static & server rendering, TypeScript support, and smart bundling. Designed for simplicity and performance in production environments.
+
+## Getting Started
+### Acquiring an OpenAI API Key
+
+- **Sign Up:** Visit the OpenAI Developer Portal and sign up for an account if you haven't already.
+- **Generate API Key:** Once logged in, navigate to the API section and follow the instructions to generate a new API key.
+
+### Configuring Your API Key in the Application
+After obtaining your OpenAI API key, you'll follow a similar process to configure it within your application:
+
+- **Create a .env File:** Create a file named .env. This file is where you'll store your OpenAI API key securely.
+
+- **Add API Key to .env File:** Open the .env file and add the following line, replacing your_api_key_here with the API key you obtained from OpenAI:
+
+```
+OPENAI_API_KEY=your_api_key_here
+```
+- **Example Configuration:** Refer to the .env.example file in the root directory for an example of how to format your .env file correctly.
+
+## Installation
+
+### Prerequisites
+- Docker
+
+Run locally: 
+```bash
+git clone https://github.com/devzero-inc/ai-assisted-docs.git
+cd ai-assisted-docs
+docker compose up
+```
+App will be running on ```PORT:3000``` -> [http://localhost:3000/](http://localhost:3000/)
+
+Now just go to [http://localhost:3000/](http://localhost:3000/) and explore the application.
