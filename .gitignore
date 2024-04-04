@@ -3,5 +3,6 @@
 /out/
 /build
 
+.env
 .env*.local
 next-env.d.ts

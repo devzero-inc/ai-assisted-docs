@@ -6,8 +6,8 @@ const createContext = async (embedding: number[]) => {
 
     const { error, data: resTable } = await supabase.rpc("vector_search", {
       input_embedding: embedding,
-      match_threshold: 0.7,
-      match_count: 2,
+      match_threshold: 0.6,
+      match_count: 3,
     });
 
     if (error) {
