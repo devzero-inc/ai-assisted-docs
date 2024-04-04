@@ -22,6 +22,9 @@ With the help of a customized ChatGPT, our project offers a novel way to access 
 
 - **Customized Communication:** At the core of our AI-assisted documentation is the integration with OpenAI's GPT-3.5, enabling the generation of personalized text completions. This dynamic interaction model not only answers queries but also provides insights, suggestions, and further reading options, all streamed directly to the user.
 
+## Disclaimer 
+The documentation provided herein is solely for testing and demonstration purposes. It is not the official documentation for DevZero.
+
 ## Technology Stack
 
 Our project leverages a robust technology stack, focusing on **Supabase** for database management and **Next.js** for our development framework.

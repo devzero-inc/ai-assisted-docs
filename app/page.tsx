@@ -4,12 +4,14 @@ import { useState } from "react";
 import Image from "next/image";
 import generateResponse from "@/http/api";
 import Response from "@/components/Response";
+import DisclaimerModal from "@/components/Disclaimer";
 
 const Home = () => {
   const [prompt, setPrompt] = useState<string>("");
   const [response, setResponse] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false); 
+  const [showDisclaimer, setShowDisclaimer] = useState<boolean>(true);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,6 +29,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-8 bg-primary h-screen">
+      <DisclaimerModal isOpen={showDisclaimer} onClose={() => setShowDisclaimer(false)} />
       <div className="flex items-center gap-2">
         <Image src={`/icons/image.png`} alt="Logo" width={80} height={80} />
         <h1 className="font-bold text-4xl">
