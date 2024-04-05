@@ -18,9 +18,10 @@ const config: Config = {
       colors:{
         'primary': '#0f0b29',
         'secondary': '#261046',
+        'cus-card': '#F2EBFF'
       }
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'),],
 };
 export default config;

@@ -1,0 +1,22 @@
+# Platform
+
+DevZero provides developers with cloud-hosted development environments. DevZero has a management plane (hosted within our cloud), and a data plane, hosted either within your cloud (self-hosted SaaS) or within DevZero's cloud (fully-hosted SaaS). There is no functional difference between these two options.
+
+DevZero’s platform consists of a various components and is made available as a scalable, fault-tolerant, distributed system. It is hosted in AWS, and runs on EKS.
+
+## Management Plane
+
+This consists of a set of micro-services hosted within DevZero’s internal cloud. They are responsible for:
+
+- user management
+- orchestrating and scheduling environments for customer deployments
+- API presentation layer
+- provisioning environments to run as CI tasks, or for other ephemeral use-cases
+
+## Developer environments
+
+These are hosted either within DevZero’s cloud (fully-hosted SaaS), or the customer’s cloud (self-hosted SaaS). All resources are managed externally from the control/management plane. Every environment (standalone dev env, containers on K8s, etc) has a DevZero agent running inside it that helps manage state and track resource utilization.
+
+## CLI/IDE integration/Web UI
+
+The `dz` CLI is there to make it easier for developers to interact with environments. They work in parallel with the various IDE integrations - with the goal of letting developers use their local tools with DevZero’s environments. The web UI is a GUI that developers can use to provision/deprovision/manage environments.

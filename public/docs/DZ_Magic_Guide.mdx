@@ -1,0 +1,52 @@
+
+# DZ Magic
+
+Setting up a new development environment or migrating to a new machine can be a time-consuming and tedious task. From managing numerous repositories and packages to configuring dotfiles and essential extensions, it's easy to get overwhelmed with the manual setup process. That's where DZ Magic comes in to save the day.
+
+DZ Magic is a powerful command-line tool designed to simplify the process of creating a template for your development environment. By guiding you through a series of steps, it collects information about your local repositories, installed packages, dotfiles, and even Visual Studio Code extensions. DZ Magic compiles everything into a comprehensive template that can be easily utilized to launch a brand new machine with your preferred setup.
+
+With DZ Magic, you no longer need to go through the hassle of manually recreating your development environment from scratch. Whether you're setting up a new workstation or sharing your setup with teammates, this tool ensures consistency and efficiency by automating the entire process. Say goodbye to hours of repetitive tasks and hello to a streamlined environment replication experience.
+
+In this documentation, we will guide you through the installation and usage of DZ Magic, helping you leverage its full potential.
+
+## Prerequisites
+
+- DevZero CLI: Follow the steps here to install the CLI
+
+## Getting Started
+
+Open a terminal or command prompt.
+
+Run the following command to start DZ Magic:
+
+```
+dz onboard magic
+```
+
+Once you enter the name and description for your template, DevZero will acquire a machine for you. This step may take a moment to complete.
+
+Next, DZ Magic will prompt you to select your local repositories. Use the arrow keys to navigate through the list and press Enter to select or deselect repositories, and select Done once the selection is made.
+
+DZ Magic will automatically detect and collect the different brew, npm, and apt packages installed in your environment.
+
+Then DZ Magic will ask you to choose your dotfiles in your home directory to include in the template. If you want to upload dotfiles from your repository, press "n" when asked if you want to upload local dotfiles and then paste the link for your dotfiles repository when asked.
+
+Finally, DZ Magic will scan for your Visual Studio Code extensions and collect information about them. This step requires Visual Studio Code to be installed on your machine.
+
+Once all the details are collected and the template is applied, you will be SSHed into your machine using your preferred shell, ready to start working in your replicated environment. Enjoy the convenience of a fully set up development environment without the hassle of manual configuration.
+
+## Deleting Your Data
+
+DZ Magic offers a convenient command to delete all the data associated with your environment, including machines, templates, and local data that was collected during the setup process. This section provides instructions on how to use the delete command to remove your data securely. Run the following command in your terminal:
+
+```
+dz onboard magic-delete
+```
+
+DZ Magic will prompt you to confirm the deletion action. Review the prompt carefully to ensure that you understand the consequences of deleting your data.
+
+DZ Magic will begin the deletion process, removing all your associated machines, templates, and collected local data.
+
+The deletion process may take some time, depending on the amount of data being removed. Please be patient and allow DZ Magic to complete the operation. Once the deletion process is finished, you will receive a confirmation message indicating that your data has been successfully deleted.
+
+It's important to note that the data deletion process with DZ Magic is irreversible. Once the data is deleted, it cannot be recovered. Please exercise caution and ensure that you have a backup of any important data before proceeding with the deletion.

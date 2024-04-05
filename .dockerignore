@@ -1,0 +1,6 @@
+.next
+.vscode
+.env.local
+/node_modules
+.env
+start.txt
